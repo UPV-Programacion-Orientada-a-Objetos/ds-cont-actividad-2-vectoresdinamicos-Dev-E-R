@@ -5,16 +5,15 @@
 void addPackage();
 void reportState();
 void reception();
-// void dispatchPackage();
+void agregarDatoPila(int, double, std::string, int, char);
+void dispatchPackage();
 void incrementCapacity();
-// void inspectFront();
-// void reportDestiny();
 void liberarMemoria(); 
 
 
 int *idPackage = nullptr;
 double *weigth = nullptr;
-string *destiny = nullptr;
+std::string *destiny = nullptr;
 int *priority = nullptr;
 char *state = nullptr;
 
@@ -30,7 +29,7 @@ int main() {
 
     idPackage = new int[capacity];
     weigth = new double[capacity];
-    destiny = new string[capacity];
+    destiny = new std::string[capacity];
     priority = new int[capacity];
     state = new char[capacity];
     
@@ -56,7 +55,7 @@ int main() {
                 dispatchPackage();
                 break;
             case 4:
-                reportDestiny();
+                reportState();
                 break;
             case 5:
                 liberarMemoria(); 
@@ -248,7 +247,7 @@ void incrementCapacity(){
     capacity++;
 }
 
-void agregarDatoPila(int id, double peso, string destino, int prioridad, char stado) {
+void agregarDatoPila(int id, double peso,std::string destino, int prioridad, char stado) {
     
     int *ptr_aux_idPackage = new int[packagesOnSystem + 1];
     double *ptr_aux_weigth = new double[packagesOnSystem + 1];
