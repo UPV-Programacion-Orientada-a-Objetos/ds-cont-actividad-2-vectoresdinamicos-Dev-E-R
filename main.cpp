@@ -10,12 +10,11 @@ void incrementCapacity();
 // void inspectFront();
 // void reportDestiny();
 void liberarMemoria(); 
-std::string priorityAText(int p); 
 
 
 int *idPackage = nullptr;
 double *weigth = nullptr;
-std::string *destiny = nullptr;
+string *destiny = nullptr;
 int *priority = nullptr;
 char *state = nullptr;
 
@@ -31,7 +30,7 @@ int main() {
 
     idPackage = new int[capacity];
     weigth = new double[capacity];
-    destiny = new std::string[capacity];
+    destiny = new string[capacity];
     priority = new int[capacity];
     state = new char[capacity];
     
